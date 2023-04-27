@@ -3,19 +3,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: deploy-01
-  name: deploy-01
+    app: deploy-03
+  name: deploy-03
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: deploy-01
+      app: deploy-03
       scenario: pdb-poc
   strategy: {}
   template:
     metadata:
       labels:
-        app: deploy-01
+        app: deploy-03
         scenario: pdb-poc
     spec:
       containers:
@@ -35,15 +35,15 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: deploy-01
-  name: deploy-01
+    app: deploy-03
+  name: deploy-03
 spec:
   ports:
   - port: 80
     protocol: TCP
     targetPort: 8080
   selector:
-    app: deploy-01
+    app: deploy-03
     scenario: pdb-poc
   type: NodePort
 status:

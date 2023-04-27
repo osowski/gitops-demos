@@ -3,10 +3,10 @@ data:
   index.html: |
     <html>
     <body>
+    <!-- TODO: Add default css and auto page refresh logic -->
     <p>RED</p>
     </body>
     </html>
 kind: ConfigMap
 metadata:
-  creationTimestamp: null
   name: nginx-index-red
