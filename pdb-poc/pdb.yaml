@@ -7,8 +7,3 @@ spec:
   selector:
     matchLabels:
       scenario: pdb-poc
-status:
-  currentHealthy: 0
-  desiredHealthy: 0
-  disruptionsAllowed: 0
-  expectedPods: 0
