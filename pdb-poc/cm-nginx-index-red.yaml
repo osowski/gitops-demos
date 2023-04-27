@@ -1,0 +1,12 @@
+apiVersion: v1
+data:
+  index.html: |
+    <html>
+    <body>
+    <p>RED</p>
+    </body>
+    </html>
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: nginx-index-red

@@ -1,0 +1,54 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: deploy-01
+  name: deploy-01
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deploy-01
+      scenario: pdb-poc
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: deploy-01
+        scenario: pdb-poc
+    spec:
+      containers:
+      - image: nginxinc/nginx-unprivileged
+        name: nginx
+        resources: {}
+        volumeMounts:
+        - mountPath: /usr/share/nginx/html
+          name: nginx-index
+      volumes:
+      - name: nginx-index
+        configMap:
+          name: nginx-index-red
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: deploy-01
+  name: deploy-01
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: deploy-01
+    scenario: pdb-poc
+  type: NodePort
+status:
+  loadBalancer: {}
+---
