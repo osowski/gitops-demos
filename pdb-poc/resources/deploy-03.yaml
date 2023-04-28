@@ -5,6 +5,7 @@ metadata:
   labels:
     app: deploy-03
   name: deploy-03
+spec:
   strategy:
     type: RollingUpdate
     rollingUpdate:
