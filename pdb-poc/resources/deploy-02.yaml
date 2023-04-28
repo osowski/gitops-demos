@@ -17,6 +17,7 @@ spec:
       labels:
         app: deploy-02
         scenario: pdb-poc
+        current-rev: green
     spec:
       containers:
       - image: nginxinc/nginx-unprivileged
@@ -28,7 +29,7 @@ spec:
       volumes:
       - name: nginx-index
         configMap:
-          name: nginx-index-red
+          name: nginx-index
 status: {}
 ---
 apiVersion: v1

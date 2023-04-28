@@ -6,16 +6,15 @@ data:
     <meta http-equiv="Refresh" content="5">
     <style>
       body {
-        background-color: red;
+        background-color: green;
         color: white;
       }
     </style>
     </head>
     <body>
-    <!-- TODO: Add default css and auto page refresh logic -->
-    <p>RED</p>
+    <p>Hello, world!</p>
     </body>
     </html>
 kind: ConfigMap
 metadata:
-  name: nginx-index-red
+  name: nginx-index
