@@ -6,12 +6,13 @@ metadata:
     app: deploy-05
   name: deploy-05
 spec:
+  strategy:
+    type: Replace
   replicas: 1
   selector:
     matchLabels:
       app: deploy-05
       scenario: pdb-poc
-  strategy: {}
   template:
     metadata:
       labels:
