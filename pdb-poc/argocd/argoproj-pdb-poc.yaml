@@ -8,7 +8,7 @@ spec:
     namespace: pdb-poc
     server: 'https://kubernetes.default.svc'
   source:
-    path: pdb-poc
+    path: pdb-poc/resources
     repoURL: 'https://github.com/osowski/gitops-demos.git'
     targetRevision: HEAD
   sources: []
