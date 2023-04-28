@@ -7,7 +7,7 @@ metadata:
   name: deploy-05
 spec:
   strategy:
-    type: Replace
+    type: Recreate
   replicas: 1
   selector:
     matchLabels:
