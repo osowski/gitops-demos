@@ -21,7 +21,7 @@ spec:
       labels:
         app: deploy-04
         scenario: pdb-poc
-        current-rev: blue
+        current-rev: red
     spec:
       containers:
       - image: nginxinc/nginx-unprivileged
